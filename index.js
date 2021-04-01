@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //Routes middlewares
 app.use('/api', authRoute);
 
-
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
     console.log('Server up and running');
   });
